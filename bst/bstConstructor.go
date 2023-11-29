@@ -53,7 +53,7 @@ func (tree *BST) Remove(value int) (t *BST) {
 	// find the node to remove
 	// replace with the number in the right subtree that is the smallest
 	// if there is no right subtree, replace with the left subtree that has the largest value
-	t = tree
+
 	current := tree
 	parentEdgeLink := &tree
 	var nodeToRemove *BST
