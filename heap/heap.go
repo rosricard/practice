@@ -1,5 +1,7 @@
 package heap
 
+// A heap is a complete binary tree
+
 import "fmt"
 
 // MaxHeap struct has a slice that holds the array
