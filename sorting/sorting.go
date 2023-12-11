@@ -14,9 +14,9 @@ func Selection_sort(arr []int) []int {
 	for i := 0; i < len(arr); i++ {
 		// Find the index of the smallest element in the unsorted part of the array
 		min := i
-		for inner := i; inner < len(arr); inner++ {
-			if arr[inner] < arr[min] {
-				min = inner
+		for j := i; j < len(arr); j++ {
+			if arr[j] < arr[min] {
+				min = j
 			}
 		}
 
@@ -36,3 +36,27 @@ func Selection_sort(arr []int) []int {
 // t(n) = c8*n + c1*n + c2*n + (n(n-1))/2 *c9 + c6*n + c7
 // t(n) = an^2 + bn + c
 // simplify to t(n) = theta(n^2)
+
+func Bubble_sort(arr []int) []int {
+	// for i in 0 to n-1
+	// 	for j in n-1 down to i+1:
+	//		if arr[j-1] > arr[j]:
+	//			swap arr[j-1], arr[j]
+	n := len(arr)
+	swapped := true
+
+	for swapped {
+		swapped = false
+		for i := 1; i < n; i++ {
+			if arr[i-1] > arr[i] {
+				// Swap arr[i-1] and arr[i]
+				arr[i-1], arr[i] = arr[i], arr[i-1]
+				swapped = true
+			}
+		}
+		n-- // Reduce the loop range after each pass
+	}
+	return arr
+}
+
+//t(n) = theta(n^2)

@@ -155,7 +155,7 @@ func main() {
 
 	//sorting
 	arr := []int{5, 8, 3, 9, 4, 1, 7}
-	val := sort.Selection_sort(arr)
+	val := sort.Bubble_sort(arr)
 	fmt.Println(val)
 }
 
